@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Header from './components/header'
+import Filter from './components/filter'
+import Dropdown from './components/dropdown'
+import ProjectCard from './components/projectCard'
+import testData from './testData'
+
 class App extends Component {
+  state = {
+    projects: []
+  }
+
+  componentDidMount() {
+    this.setState({
+      projects: testData
+    });
+  }
+
   render() {
+    console.log(this.state.projects);
+    let project = this.state.projects.map((data, i) =>  <ProjectCard key={i} project={data} /> )
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <Dropdown />
+        <Filter />
+        <div className="projectCardDiv">
+          {project}
+        </div>
       </div>
     );
   }

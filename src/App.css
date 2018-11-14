@@ -1,32 +1,212 @@
+/* Set up overall structure */
+
 .App {
-  text-align: center;
+ display: grid;
+ grid-template-areas: 'header header'
+                      'dropdown filter'
+                      'projectCard projectCard';
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+button {
+  outline: none;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ---------- Dropdown css ----------------*/
+
+.dropdownDiv {
+ grid-area: dropdown;
+ display: flex;
+ padding-top: 10px;
+ padding-left: 5%;
+ color: rgb(36,	72,	112);
+ font-size: 1.5em;
+}
+
+.dropdownTitle{
+  padding-top: 1.5%;
+}
+
+.dropdownSymbol {
+  font-weight: 900;
+  margin-left: 20%;
+  font-size: 1.2em;
+  color: rgb(20,	163,	136);
+  background-color: rgb(245,	245,	245);
+  padding-left: .3em;
+  padding-right: .6em;
+  padding-bottom: .1em;
+  width: auto;
+  transition: .2s;
+}
+
+.rotateSymbol {
+  font-weight: 900;
+  margin-left: 20%;
+  font-size: 1.2em;
+  color: rgb(20,	163,	136);
+  background-color: rgb(245,	245,	245);
+  padding-left: .3em;
+  padding-right: .6em;
+  padding-bottom: .1em;
+  transform: rotate(90deg);
+  transition: .2s;
+}
+
+.dropdownOptions {
+  position: absolute;
+  left: 20%; top: 80%;
+  width: 250px;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+  background-color: rgb(245,	245,	245);
+}
+
+.dropdownOptions input {
+  padding-left: 8px;
+  margin-left: 3%;
+  width: 90%;
+  height: 2.5em;
+  border: .2em solid rgb(80,	183,	162);
+}
+.dropdownOptions input::placeholder {
+  font-style: italic;
+}
+
+
+.dropdownOptions div {
+  margin-left: 3%;
+  padding-left: 5%;
+  color: rgb(80, 183, 162);
+  width: 90%;
+  font-size: 80%;
+  margin-bottom: 2%;
+}
+
+.dropdownFormat {
+  margin-left: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+
+
+
+
+/* ---------- Filter css ----------------*/
+
+.filter {
+  grid-area: filter;
+  padding-top: 10px;
+  margin-right: 2%;
+  height: 2.5em;
+}
+
+.filter button {
+  float: right;
+  margin-left: 2.5%;
+  font-weight: 600;
+  font-size: 1em;
+  height: 100%;
+  width: 10em;
   color: white;
+  background-color: rgb(20,	163,	136);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
 }
 
-.App-link {
-  color: #61dafb;
+.filter input {
+  padding-left: 8px;
+  float: right;
+  height: 90%;
+  width: 45%;
+  border-color: rgb(36,	72,	112);
+  border-width: 1.5px;
+}
+.filter input::placeholder {
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ---------- Project Card css ----------------*/
+
+.projectCardDiv {
+ grid-area: projectCard;
+ margin-top: 10px;
+ margin-left: 1%;
+ margin-right: 1%;
+ display: grid;
+ grid-template-columns: 50% 50%
+}
+
+.projectCard {
+ background-color: rgb(245, 245, 245);
+ margin-top: 10px;
+ margin-left: 20px;
+ border: .2em solid rgba(225, 225, 225, .5);
+}
+
+.titleDiv {
+  display: flex;
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 1.4em;
+}
+
+.cardTitle {
+  color: rgb(20,	163,	136);
+  font-weight: 600;
+  border-bottom: .12em solid rgb(20,	163,	136);
+  padding-bottom: 4%;
+  width: 80%;
+  font-size: 120%
+}
+
+.metricsButton {
+  background-color: rgb(33, 112,	210);
+  color: white;
+  font-size: 80%;
+  width: 15%;
+  padding: 1% 1% 3.5%;
+  min-width: 90px;
+  margin-left: 3.5%;
+}
+
+.projectDescription {
+ margin-top: 3%;
+ margin-left: 2%;
+ margin-right: 2%;
+ margin-bottom: 2%;
+ font-size: 90%;
+ height: 5em;
+}
+
+/* ---------- Header css ----------------*/
+
+.header {
+ grid-area: header;
+ display: flex;
+ height: 30px;
+ border-bottom: .2em solid rgb(227,	102,	10);
+ padding-top: 10px
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.headerTabs {
+  font-weight: 600;
+  margin-left: 70%;
+  display: flex;
+}
+
+.selectedTab {
+  font-weight: 600;
+  color: rgb(36	72	112);
+  margin-left: 40%;
+}
+
+.headerTab {
+  font-weight: 600;
+  color: rgb(54	174	150);
+  margin-left: 40%;
 }
