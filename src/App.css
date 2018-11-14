@@ -18,14 +18,17 @@ button {
 .dropdownDiv {
   grid-area: dropdown;
   display: flex;
-  padding-top: 10px;
+  padding-top: 3%;
   padding-left: 5%;
   color: rgb(36, 72, 112);
   font-size: 1.5em;
+  height: 1.7em;
 }
 
 .dropdownTitle {
   padding-top: 1.5%;
+  font-size: 85%;
+  font-weight: 500;
 }
 
 .dropdownFormat {
@@ -38,7 +41,7 @@ button {
 
 .dropdownSymbol {
   font-weight: 900;
-  margin-left: 20%;
+  margin-left: 18%;
   font-size: 1.2em;
   color: rgb(20, 163, 136);
   background-color: rgb(245, 245, 245);
@@ -77,6 +80,7 @@ button {
   width: 250px;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
   background-color: rgb(245, 245, 245);
+
 }
 
 .dropdownOptions input {
@@ -103,9 +107,9 @@ button {
 
 .filter {
   grid-area: filter;
-  padding-top: 10px;
+  padding-top: 3%;
   margin-right: 2%;
-  height: 2.5em;
+  height: 2.3em;
 }
 
 .filter button {
@@ -136,7 +140,7 @@ button {
 
 .projectCardDiv {
   grid-area: projectCard;
-  margin-top: 10px;
+  margin-top: 1.2%;
   margin-left: 1%;
   margin-right: 1%;
   display: grid;
@@ -198,6 +202,8 @@ button {
 }
 
 .logo {
+  font-weight: 600;
+  font-size: 95%;
   padding-left: 10px;
 }
 
@@ -205,16 +211,15 @@ button {
   font-weight: 600;
   margin-left: 70%;
   display: flex;
+  font-size: 90%;
 }
 
 .selectedTab {
-  font-weight: 600;
   color: rgb(36 72 112);
   margin-left: 40%;
 }
 
 .headerTab {
-  font-weight: 600;
   color: rgb(54 174 150);
   margin-left: 40%;
 }

@@ -5,7 +5,7 @@ class Filter extends React.Component {
     return(
       <div className='filter'>
         <button> &#x2295; Create Project</button>
-        <input type="text" placeholder="filter"/>
+        <input type="text" placeholder="filter" value={this.props.value} onChange={this.props.handleChange}/>
       </div>
     )
   }
