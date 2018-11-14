@@ -6,6 +6,7 @@ class Dropdown extends React.Component {
   };
 
   renderDropdownOptions = () => {
+    //fake data for the dropdown
     return (
       <div className="dropdownOptions">
         <input type="text" placeholder="filter" />
@@ -26,7 +27,6 @@ class Dropdown extends React.Component {
   };
 
   handleClick = () => {
-    console.log(this.state.isOpen);
     this.setState({
       isOpen: !this.state.isOpen
     });

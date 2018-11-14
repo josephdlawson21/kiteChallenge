@@ -5,12 +5,13 @@ class Header extends React.Component {
   state = {
     selectedTab: 'Projects'
   }
+
   handleClick = (e) => {
+    //get selected tab value and save it to state
     this.setState({
       selectedTab: e.target.innerHTML
     });
   }
-
 
   render () {
     return(

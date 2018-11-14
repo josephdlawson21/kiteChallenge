@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 
+
+// Import components
 import Header from "./components/header";
 import Filter from "./components/filter";
 import Dropdown from "./components/dropdown";
@@ -14,6 +16,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+    // Simulate a api call on to get projects data and put it into state
     this.setState({
       projects: testData
     });
@@ -26,16 +29,18 @@ class App extends Component {
   };
 
   handleChange = e => {
+    //Update Filter term
     this.setState({
       filter: e.target.value
     });
   };
 
   render() {
-    console.log(this.state.projects);
+    // iterate through the filtered projects and render a project card for each
     let project = this.handleFilter().map((data, i) => (
       <ProjectCard key={i} project={data} />
     ));
+
     return (
       <div className="App">
         <Header />
