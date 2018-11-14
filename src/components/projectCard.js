@@ -1,21 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const ProjectCard = ({project}) => {
+const ProjectCard = ({ project }) => {
   return (
-    <div className='projectCard'>
-      <div className='titleDiv'>
-        <div className='cardTitle'>
-          {project.title}
-        </div>
-        <button className='metricsButton'>
-          View Metrics
-        </button>
+    <div className="projectCard">
+      <div className="titleDiv">
+        <div className="cardTitle">{project.title}</div>
+        <button className="metricsButton">View Metrics</button>
       </div>
-      <div className='projectDescription'>
-        {project.description}
-      </div>
+      <div className="projectDescription">{project.description}</div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

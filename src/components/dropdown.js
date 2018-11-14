@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
 class Dropdown extends React.Component {
   state = {
     isOpen: false
-  }
+  };
 
   renderDropdownOptions = () => {
-    return(
-      <div className='dropdownOptions'>
-        <input type="text" placeholder="filter"/>
+    return (
+      <div className="dropdownOptions">
+        <input type="text" placeholder="filter" />
         <div>option 1</div>
         <div>option 2</div>
         <div>option 3</div>
@@ -22,31 +22,31 @@ class Dropdown extends React.Component {
         <div>option 11</div>
         <div>option 12</div>
       </div>
-    )
-  }
+    );
+  };
 
   handleClick = () => {
     console.log(this.state.isOpen);
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  };
 
-  render () {
-    return(
+  render() {
+    return (
       <div className="dropdownDiv">
-        <div className="dropdownTitle">
-          Kitewheel
-        </div>
+        <div className="dropdownTitle">Kitewheel</div>
         <div className="dropdownFormat">
-          <div className={this.state.isOpen ? "rotateSymbol" : "dropdownSymbol"} onClick={this.handleClick}>
-            	&rsaquo;
+          <div
+            className={this.state.isOpen ? "rotateSymbol" : "dropdownSymbol"}
+            onClick={this.handleClick}
+          >
+            &rsaquo;
           </div>
           {this.state.isOpen && this.renderDropdownOptions()}
         </div>
-
       </div>
-    )
+    );
   }
 }
 
